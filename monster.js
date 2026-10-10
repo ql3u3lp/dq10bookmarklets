@@ -73,16 +73,20 @@
 	}
 	dfd.done(function() {
 		// Makes a CSV data.
-		var headers = [
-			{key: 'name',	name: 'モンスター名'},
-			{key: 'count',	name: '討伐数'},
-			{key: 'exp',	name: '経験値'},
-			{key: 'stamp',	name: '特訓スタンプ'},
-			{key: 'gold',	name: 'ゴールド'},
-			{key: 'isScanned',	name: 'みやぶる'},
-			{key: 'isDefeatTarget',	name: '100匹討伐対象'},
-			{key: 'url', name: 'URL'},
-		];
+	var headers = [
+    {key: 'name', name: 'モンスター名'},
+    {key: 'count', name: '討伐数'},
+    {key: 'exp', name: '経験値'},
+    {key: 'stamp', name: '特訓スタンプ'},
+    {key: 'gold', name: 'ゴールド'},
+    {key: 'isScanned', name: 'みやぶる'},
+    {key: 'isDefeatTarget', name: '100匹討伐対象'},
+    {key: 'url', name: 'URL'}
+];
+		console.log(headers);
+console.log(headers.map(function(h) {
+    return h.name;
+}));
 		var csv = '\uFEFF';	// BOM for Microsoft Excel
 		for (var i = 0; i < headers.length; i++) {
 			csv += headers[i].name + ((i === headers.length - 1) ? '\r\n' : ',');
