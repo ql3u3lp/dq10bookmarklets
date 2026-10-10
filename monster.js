@@ -81,6 +81,7 @@
 			{key: 'gold',	name: 'ゴールド'},
 			{key: 'isScanned',	name: 'みやぶる'},
 			{key: 'isDefeatTarget',	name: '100匹討伐対象'},
+			{key: 'url', name: 'URL'},
 		];
 		var csv = '\uFEFF';	// BOM for Microsoft Excel
 		for (var i = 0; i < headers.length; i++) {
@@ -138,6 +139,7 @@
 
 			monster.count = Number($tds.eq(1).text().replace(/[^\d]/g, ''));
 			monster.name  = $.trim($tds.eq(2).text());
+			monster.url = $tds.eq(2).find('a').attr('href') || '';
 			monster.exp   = Number($tds.eq(3).text().replace(/[^\d]/g, ''));
 			monster.stamp = Number($tds.eq(4).text().replace(/[^\d]/g, ''));
 			monster.gold  = Number($tds.eq(5).text().replace(/[^\d]/g, ''));
