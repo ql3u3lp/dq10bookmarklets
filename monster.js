@@ -81,12 +81,9 @@
     {key: 'gold', name: 'ゴールド'},
     {key: 'isScanned', name: 'みやぶる'},
     {key: 'isDefeatTarget', name: '100匹討伐対象'},
-    {key: 'url', name: 'URL'}
+    {key: 'url', name: 'URL'},
 ];
-		console.log(headers);
-console.log(headers.map(function(h) {
-    return h.name;
-}));
+
 		var csv = '\uFEFF';	// BOM for Microsoft Excel
 		for (var i = 0; i < headers.length; i++) {
 			csv += headers[i].name + ((i === headers.length - 1) ? '\r\n' : ',');
