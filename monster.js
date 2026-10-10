@@ -80,7 +80,7 @@
     {key: 'stamp', name: '特訓スタンプ'},
     {key: 'gold', name: 'ゴールド'},
     {key: 'isScanned', name: 'みやぶる'},
-    {key: 'isDefeatTarget', name: '100匹討伐対象'},
+
     {key: 'url', name: 'URL'},
 ];
 
