@@ -5,7 +5,7 @@
 
 	// Checks whether the URL is correct. And then, gets the character ID from it.
 	if (window.location.href.indexOf('https://hiroba.dqx.jp/sc/senreki/monster/') < 0) {
-		alert('「討伐モンスターリスト」に移動してから、再度本ブックマークを実行してください。');
+		alert('「討伐モンスターリスト」に移動してから、再度本ブックマークを実行して。');
 		return;
 	}
 
