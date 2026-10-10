@@ -5,7 +5,7 @@
 
 	// Checks whether the URL is correct. And then, gets the character ID from it.
 	if (window.location.href.indexOf('https://hiroba.dqx.jp/sc/senreki/monster/') < 0) {
-		alert('「討伐モンスターリスト」に移動してから、再度本ブックマークを実行し。');
+		alert('「討伐モンスターリスト」に移動してから、再度本ブックマークを実行しましょう');
 		return;
 	}
 
@@ -80,7 +80,7 @@
     {key: 'stamp', name: '特訓スタンプ'},
     {key: 'gold', name: 'ゴールド'},
     {key: 'isScanned', name: 'みやぶる'},
-
+    {key: 'isScanned', name: '100匹討伐対象'},
     {key: 'url', name: 'URL'},
 ];
 
@@ -140,7 +140,7 @@
 
 			monster.count = Number($tds.eq(1).text().replace(/[^\d]/g, ''));
 			monster.name  = $.trim($tds.eq(2).text());
-			monster.url = $tds.eq(2).find('a').attr('href') || '';
+			monster.url = ($tds.eq(2).find('a').attr('data-url') || '').split('/monster/').pop();
 			monster.exp   = Number($tds.eq(3).text().replace(/[^\d]/g, ''));
 			monster.stamp = Number($tds.eq(4).text().replace(/[^\d]/g, ''));
 			monster.gold  = Number($tds.eq(5).text().replace(/[^\d]/g, ''));
