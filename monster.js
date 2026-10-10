@@ -1,3 +1,4 @@
+/** @licence <https://tool.kyokugen.info/dq10tools/license> */
 (function() {
 	'use strict';
 
